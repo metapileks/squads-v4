@@ -280,3 +280,8 @@ mod test {
         }
     }
 }
+
+// The IDL generator needs every field type of a borsh-derived struct to describe itself.
+// SmallVec has hand-written serialization, so it opts out of the IDL type table.
+#[cfg(feature = "idl-build")]
+impl<L, T> anchor_lang::IdlBuild for SmallVec<L, T> {}

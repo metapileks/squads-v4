@@ -17,6 +17,7 @@ no-idl = []
 no-log-ix-name = []
 cpi = ["no-entrypoint"]
 testing = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
 
 [dependencies]
 anchor-lang = { version = "0.32", features = ["allow-missing-optionals"] }
